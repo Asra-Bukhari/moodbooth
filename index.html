@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoodBooth: Your Personal Click Cabin!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Shutter Image -->
+  <div class="shutter" id="shutter">
+    <img src="assets/shutter.jpg" alt="Shutter" />
+  </div>
+
+  <!-- Shutter Sound -->
+  <audio id="shutter-sound" src="assets/shutter-sound.mp3" preload="auto"></audio>
+
+  <!-- Intro Section -->
+  <div class="intro">
+    <h1>
+  <span class="mood">Mood</span><span class="booth">Booth</span>
+</h1>
+
+    <button id="start-btn">Open Shutter</button>
+  </div>
+
+  <!-- Camera Section (Hidden Initially) -->
+  <div class="camera-section" id="camera-section" style="display: none;">
+    <video id="video" autoplay playsinline></video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
