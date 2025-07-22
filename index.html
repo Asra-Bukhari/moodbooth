@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MoodBooth: Your Personal Click Cabin!</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoodBooth</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Shutter Image -->
+
+  <!-- Shutter -->
   <div class="shutter" id="shutter">
-    <img src="assets/shutter.jpg" alt="Shutter" />
+    <img src="assets/shutter.png" alt="Shutter" />
   </div>
 
-  <!-- Shutter Sound -->
-  <audio id="shutter-sound" src="assets/shutter-sound.mp3" preload="auto"></audio>
+  <!-- Sound -->
+  <audio id="shutter-open" src="assets/shutter-open.mp3" preload="auto"></audio>
 
-  <!-- Intro Section -->
-  <div class="intro">
-    <h1>
-  <span class="mood">Mood</span><span class="booth">Booth</span>
-</h1>
-
-    <button id="start-btn">Open Shutter</button>
+  <!-- Intro -->
+  <div class="intro" id="intro">
+    <h1><span class="mood">Mood</span><span class="booth">Booth</span></h1>
+    <p class="tagline">Your personal click cabin!</p>
+    <button id="start-btn">Open</button>
   </div>
 
-  <!-- Camera Section (Hidden Initially) -->
-  <div class="camera-section" id="camera-section" style="display: none;">
-    <video id="video" autoplay playsinline></video>
+  <!-- Camera Section -->
+  <div class="camera-section" id="camera-section">
+    <div class="camera-box">
+      <video id="video" autoplay playsinline></video>
+      <div class="filters-list">
+        <div id="filter-options"></div>
+      </div>
+      <button class="shutter-button"><i class="fas fa-camera-retro"></i></button>
+    </div>
   </div>
 
   <script src="script.js"></script>
