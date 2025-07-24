@@ -1,8 +1,7 @@
-# 📸 MoodBooth
+<h1 align="center">📸 MoodBooth</h1>
+> _<p align="center"><i>Your personal click cabin!</i></p>_
 
 **MoodBooth** is a web-based virtual photo booth. Capture three fun photos with live filters, aesthetic stickers, countdown effects, and download them as a beautiful vertical photo strip.
-
-> _"Your personal click cabin!"_
 
 ---
 
