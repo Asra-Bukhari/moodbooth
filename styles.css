@@ -321,12 +321,114 @@ canvas#photo-strip {
 }
 
 
+
 @media (max-width: 768px) {
-  .strip-wrapper {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .intro h1 {
+    font-size: 45px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .camera-box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .filter-item {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .shutter-button {
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  .strip-section {
+    padding: 10px;
+  }
+
+  .photo-strip-box {
+    padding: 20px 10px;
+    max-width: 90vw;
+  }
+
+  .photo-strip-html {
+    width: 230px;
+    padding: 15px;
+  }
+
+  .strip-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .strip-label {
+    font-size: 16px;
+  }
+
+  .strip-buttons-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .strip-buttons-box button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .sticker-row {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .color-picker-box {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  #stickerPanel img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .applied-sticker-wrapper img {
+    width: 60px;
+  }
+
+  .resizable-container .resize-handle {
+    width: 8px;
+    height: 8px;
+  }
+
+   .strip-wrapper {
     flex-direction: column;
     align-items: center;
   }
 
+  
   canvas#photo-strip {
     height: auto;
   }
