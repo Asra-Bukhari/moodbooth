@@ -644,7 +644,7 @@ canvas#photo-strip {
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 35px;
+  font-size: 60px;
   color: #f8f8f8;
   animation: bounce 1.2s infinite;
   z-index: 20;
