@@ -6,36 +6,76 @@
   <title>MoodBooth</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
 </head>
 <body>
 
-  <!-- Shutter -->
   <div class="shutter" id="shutter">
     <img src="assets/shutter.png" alt="Shutter" />
   </div>
 
-  <!-- Sound -->
+ 
   <audio id="shutter-open" src="assets/shutter-open.mp3" preload="auto"></audio>
 
-  <!-- Intro -->
   <div class="intro" id="intro">
     <h1><span class="mood">Mood</span><span class="booth">Booth</span></h1>
     <p class="tagline">Your personal click cabin!</p>
     <button id="start-btn">Open</button>
   </div>
 
-  <!-- Camera Section -->
+ 
   <div class="camera-section" id="camera-section">
     <div class="camera-box">
       <video id="video" autoplay playsinline></video>
       <div class="filters-list">
         <div id="filter-options"></div>
       </div>
-      <button class="shutter-button"><i class="fas fa-camera-retro"></i></button>
+      <button class="shutter-button" title="Take photo"><i class="fas fa-camera-retro"></i></button>
     </div>
   </div>
 
+ 
+  <div class="strip-section" id="strip-section" style="display: none;">
+    <div class="strip-wrapper">
+
+      
+      <div class="photo-strip-box" id="download-target">
+        <div id="photo-strip" class="photo-strip-html"></div>
+      </div>
+
+    
+      <div class="strip-buttons-box">
+
+        <button id="retake-btn">Retake</button>
+        <button id="download-btn">Download Strip</button>
+       <div class="sticker-row">
+  <div class="sticker-dropdown">
+    <button id="toggleStickers">Stickers</button>
+    <div id="stickerPanel" class="hidden">
+    </div>
+  </div>
+
+  <button id="undoSticker" class="icon-button" title="Undo Last Sticker">
+    <i class="fas fa-undo-alt"></i>
+  </button>
+
+</div>
+
+           <div class="color-picker-box">
+  <label for="stripColorPicker">Strip :</label>
+  <input type="color" id="stripColorPicker" value="#ffffff" />
+  <label for="labelColorPicker">Label :</label>
+<input type="color" id="labelColorPicker" value="#000000" />
+</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="flash"></div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
