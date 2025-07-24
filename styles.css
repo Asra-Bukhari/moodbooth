@@ -371,6 +371,7 @@ canvas#photo-strip {
   }
 
   .photo-strip-html {
+    margin-top: 70px;
     width: 230px;
     padding: 15px;
   }
@@ -637,3 +638,26 @@ canvas#photo-strip {
 .resize-handle.bl { left: -5px; bottom: -5px; cursor: sw-resize; }
 .resize-handle.tr { right: -5px; top: -5px; cursor: ne-resize; }
 .resize-handle.tl { left: -5px; top: -5px; cursor: nw-resize; }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 35px;
+  color: #f8f8f8;
+  animation: bounce 1.2s infinite;
+  z-index: 20;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+.scroll-hint.hide {
+  opacity: 0;
+}

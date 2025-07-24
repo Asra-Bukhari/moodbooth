@@ -379,3 +379,42 @@ document.addEventListener("mousedown", (e) => {
     document.querySelectorAll(".resizable-container").forEach(el => el.classList.remove("active"));
   }
 });
+
+//for mobile 
+stickerPanel.querySelectorAll("img").forEach(sticker => {
+  sticker.addEventListener("touchstart", (e) => {
+   
+    e.preventDefault();
+
+    const touch = e.touches[0];
+    const stickerURL = sticker.src;
+
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("applied-sticker-wrapper");
+    wrapper.style.position = "absolute";
+    wrapper.style.left = `${touch.clientX - 50}px`;  
+    wrapper.style.top = `${touch.clientY - 50}px`;
+    wrapper.style.width = "100px";
+    wrapper.style.height = "100px";
+
+    const img = document.createElement("img");
+    img.src = stickerURL;
+    img.classList.add("applied-sticker");
+
+    wrapper.appendChild(img);
+    photoStripBox.appendChild(wrapper);
+    placedStickers.push(wrapper);
+
+    makeStickerInteractive(wrapper); 
+  }, { passive: false });
+});
+
+const photoStripHintBox = document.querySelector('.photo-strip-box');
+const scrollHint = document.querySelector('.scroll-hint');
+
+if (photoStripHintBox && scrollHint) {
+  photoStripHintBox.addEventListener('scroll', () => {
+    scrollHint.classList.add('hide');
+  }, { once: true });
+}
+
